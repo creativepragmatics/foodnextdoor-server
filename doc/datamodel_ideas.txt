@@ -1,0 +1,59 @@
+User
+ - id
+ - email
+ - address
+ - Name (optional)
+ - (gr)avatar (optional)
+ - password
+ - push_notifications_token
+ 
+
+
+(Sign in \w Facebook as well)
+
+
+Address
+ - id
+ - country
+ - city
+ - street
+ - zip code
+ - street number
+ - extra info (Stiege, Apartment Number, etc)
+
+
+Offer
+ - id
+ - image (s3)
+ - title
+ - description
+ - expiration date
+ - sealed
+ - offered_by (User)
+ - taken
+ - reserved (optional, maybe later)
+
+
+Sign up
+POST /api/users  (email, password, address)
+	(auth_token)
+
+Sign In
+POST /api/user_sessions (email, password)
+	(auth_token)
+
+Edit Profile
+PUT /api/users/:id
+
+
+Post Offer
+POST /api/offers
+
+
+OPTIONAL
+Facebook Sign In/Sign UP
+POST /api/fb_sessions (email, facebookID)
+
+
+
+

@@ -1,0 +1,11 @@
+
+# sign up
+curl -H "content-type: application/json" -X POST -d '{ "email": "petar@creativepragmatics.com", "password": "1234567890", "address": { "country": "AT", "city": "Vienna", "street": "Pater-Schwartz-Gasse", "zip": "1150", "number": "11A", "additional_information": "" } }' 127.0.0.1:8080/api/users
+
+# sign in
+curl -H "content-type: application/json" -X POST -d '{ "email": "petar@creativepragmatics.com", "password": "123456890" }' 127.0.0.1:8080/api/user_sessions
+
+# get all offers
+curl 127.0.0.1:8080/api/offers
+
+# post an offer
