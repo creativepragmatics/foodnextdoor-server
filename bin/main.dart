@@ -91,10 +91,21 @@ addTestOffers() {
   Offer.addOffer(butter);
 }
 
-main() {
+main(List<String> args) {
   app.setupConsoleLog();
-  app.start();
+  
+  var port = _getConfig("PORT", "8080");
+  
+  app.start(port: int.parse(port));
   
   addTestUsers();
   addTestOffers();
+}
+
+_getConfig(String name, [defaultValue]) {
+  var value = Platform.environment[name];
+  if (value == null) {
+    return defaultValue;
+  }
+  return value;
 }
